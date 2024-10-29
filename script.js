@@ -51,6 +51,17 @@ Gérez les abonnements de votre organisation, configurez les limites de dépense
 - **Activer les Notifications de Dépense** : Configurez des alertes pour être notifié si les dépenses se rapprochent de la limite.
 - **Suivi Mensuel** : Vérifiez régulièrement la consommation des minutes et des coûts pour adapter le plan si nécessaire.
 
+### 💼 Exemples d’Utilisation de Billing and Plans
+
+1. **Limite de Dépenses pour Actions GitHub** :  
+   Une équipe de développement active limite les dépenses pour les minutes Actions GitHub. Par exemple, l’organisation fixe une limite de 100$ par mois pour éviter les frais imprévus, surtout lors de l’exécution fréquente de tests CI/CD.
+
+2. **Suivi des Coûts pour Projets Spécifiques** :  
+   Un projet dédié aux solutions cloud inclut des workflows utilisant des minutes GitHub Actions. L’équipe suit les coûts associés dans **Billing** pour allouer les dépenses par projet.
+
+3. **Méthode de Paiement pour Comptabilité** :  
+   Le département comptabilité souhaite centraliser les paiements GitHub. L’ajout d’une carte bancaire dédiée permet de gérer les coûts et de simplifier le suivi des dépenses par l’entreprise.
+
 ---
 
 ## 🔹 2. Organization Roles & Member Privileges
@@ -80,6 +91,17 @@ Définissez des rôles et permissions pour gérer les membres de l’organisatio
 - **Roles Clairs et Précis** : Assurez-vous que chaque rôle est clair et aligné avec les responsabilités.
 - **Limiter les Owners** : Réservez le rôle de **Owner** aux administrateurs principaux pour limiter les risques de modifications accidentelles.
 
+### 💼 Exemples d’Utilisation des Rôles et Permissions
+
+1. **Role "Billing Manager" pour le Service Comptabilité** :  
+   L’équipe comptabilité reçoit le rôle **Billing Manager**, leur permettant de voir les coûts et factures sans accès aux dépôts de code ou configurations sensibles.
+
+2. **Role Personnalisé pour le Support Technique** :  
+   Un rôle personnalisé est créé pour le département support technique, leur donnant un accès en lecture seule aux dépôts de documentation sans la possibilité de modifier ou de créer du contenu.
+
+3. **Role "Member" pour les Stagiaires** :  
+   Les stagiaires reçoivent le rôle **Member** avec des permissions limitées, leur permettant d’apprendre et de contribuer sans accès aux dépôts sensibles de production.
+
 ---
 
 ## 🔹 3. Repository Roles
@@ -103,6 +125,17 @@ Contrôlez les permissions pour les dépôts au sein de l’organisation en déf
 ### 💡 Bonnes Pratiques
 - **Standardisation** : Utilisez des modèles de rôles pour standardiser les permissions et gagner du temps.
 - **Éviter le Rôle Admin par Défaut** : Limitez l’accès Admin pour éviter les modifications non autorisées.
+
+### 💼 Exemples d’Utilisation des Rôles de Dépôt
+
+1. **Rôle d’écriture pour l’équipe Documentation** :  
+   L’équipe documentation dispose d’un rôle **Write** sur un dépôt spécifique, leur permettant de publier de la documentation sans toucher au code source.
+
+2. **Rôle d’admin pour l’équipe devOps** :  
+   Les membres devOps reçoivent un rôle **Admin** sur les dépôts de test et de déploiement, leur permettant de gérer les webhooks et intégrations CI/CD en lien avec le déploiement continu.
+
+3. **Rôle de lecture seule pour le Marketing** :  
+   L’équipe marketing bénéficie d’un rôle en lecture seule (**Read**) sur les dépôts contenant des informations produit, leur permettant d’accéder aux ressources sans possibilité de modification.
 
 ---
 
@@ -128,6 +161,17 @@ Gérez la migration, la sauvegarde et l’exportation des dépôts et des donné
 ### 💡 Bonnes Pratiques
 - **Backups réguliers** : Configurez des exportations régulières pour éviter la perte de données.
 - **Vérification des Données Importées** : Assurez-vous que toutes les données sont correctement migrées avant de fermer un dépôt source.
+
+### 💼 Exemples Concrets d’Import/Export
+
+1. **Migration d’un dépôt GitLab vers GitHub** :  
+   Lorsqu’une équipe back-end migre son dépôt historique depuis GitLab vers GitHub, elle utilise l’option d’importation pour centraliser le code et profiter des fonctionnalités GitHub.
+
+2. **Export des Données pour une Sauvegarde Annuelle** :  
+   Une organisation exporte les issues et pull requests chaque année pour maintenir une archive complète des discussions et de l’évolution du code.
+
+3. **Sauvegarde des Issues pour Documentation** :  
+   Une équipe technique conserve une copie des discussions importantes dans les issues via l’exportation pour mieux documenter les décisions et changements clés du projet.
 
 ---
 
@@ -177,6 +221,17 @@ Configurer les options de blocage pour éviter les comportements indésirables, 
 - **Documenter les Raisons de Blocage** : Cela facilite le suivi et la prise de décision lors de cas similaires à l’avenir.
 - **Révision Régulière** : Consultez régulièrement la liste pour ajuster les décisions de blocage si nécessaire.
 
+### 💼 Exemples d’Utilisation de Utilisateurs Bloqués
+
+1. **Blocage temporaire suite à un comportement inapproprié** :  
+   Lorsqu’un utilisateur externe adopte un comportement non conforme, il est temporairement bloqué pour limiter son accès et lui permettre de réintégrer l’espace de travail après une période de suspension.
+
+2. **Blocage automatique des utilisateurs non vérifiés** :  
+   Une organisation configure un blocage automatique pour tout utilisateur n’ayant pas vérifié son adresse e-mail, limitant ainsi l’accès aux seuls utilisateurs de confiance.
+
+3. **Blocage permanent pour comportements récurrents** :  
+   Un utilisateur répétant des actions inappropriées, comme des spams dans les commentaires, est définitivement bloqué pour éviter de perturber les autres collaborateurs.
+
 ---
 
 ## 🔹 2. Limites d'Interaction (Interaction Limits)
@@ -204,6 +259,17 @@ Contrôler et restreindre temporairement les interactions sur les dépôts pour 
 ### 💡 Bonnes Pratiques
 - **Limiter uniquement lors de Pics de Spam** : Activer ces limites principalement en cas d’augmentation des interactions indésirables.
 - **Exceptions pour Collaborateurs de Confiance** : Ajoutez des collaborateurs de longue date dans les exceptions pour qu’ils ne soient pas affectés par les limites.
+
+### 💼 Exemples d’Utilisation des Limites d'Interaction
+
+1. **Limiter les commentaires aux contributeurs existants pendant un événement public** :  
+   Lors d’un hackathon, seuls les contributeurs existants peuvent commenter pour éviter les spams de nouveaux utilisateurs.
+
+2. **Restreindre les interactions aux comptes anciens** :  
+   Une organisation restreint les interactions aux utilisateurs ayant un compte depuis au moins trois mois pour prévenir les comportements indésirables des comptes récemment créés.
+
+3. **Exceptions pour collaborateurs de confiance** :  
+   Certains membres de l’équipe technique sont ajoutés en exception pour interagir malgré les limites, leur permettant de collaborer en continu même en cas de restrictions.
 
 ---
 
@@ -235,6 +301,17 @@ Standardiser et sécuriser le processus de revue de code pour garantir une quali
 - **Limiter le Nombre d'Auto-approbations** : Bloquez les auto-approbations pour une meilleure objectivité.
 - **Exigences Adaptées aux Projets** : Ajustez les exigences selon l'importance du dépôt ou la criticité des modifications.
 
+### 💼 Exemples d’Utilisation des Limites de Revue de Code
+
+1. **Exiger au moins deux approbations avant de fusionner dans la branche principale** :  
+   Sur la branche principale, au moins deux reviewers sont requis pour chaque pull request afin de s’assurer de la qualité et de la conformité du code avant le déploiement.
+
+2. **Limiter l’auto-approbation pour une meilleure objectivité** :  
+   Les développeurs ne peuvent pas approuver leurs propres pull requests, garantissant ainsi une relecture impartiale de chaque contribution.
+
+3. **Exiger des revues spécifiques pour les branches critiques** :  
+   Les branches comme \`production\` nécessitent l’approbation d’un membre senior pour garantir la stabilité du code en environnement critique.
+
 ---
 
 ## 🔹 4. Modérateurs (Moderators)
@@ -262,6 +339,17 @@ Assurez un contrôle des discussions, des commentaires, et de l'activité global
 - **Sélection de Modérateurs Responsables** : Choisissez des membres fiables et expérimentés pour ce rôle.
 - **Guidelines Claires et Complètes** : Définissez des règles précises pour faciliter le travail des modérateurs.
 - **Révision Régulière des Permissions de Modération** : Vérifiez que les modérateurs respectent les guidelines et ajustez les permissions si besoin.
+
+### 💼 Exemples d’Utilisation des Modérateurs
+
+1. **Assignation de modérateurs pour des projets sensibles** :  
+   Pour un projet à forte visibilité, des modérateurs sont assignés pour surveiller les discussions et s'assurer que les interactions restent constructives.
+
+2. **Gestion des discussions et suppression de commentaires inappropriés** :  
+   Les modérateurs sont autorisés à supprimer des commentaires contenant des propos inappropriés ou non constructifs, assurant ainsi le respect des standards de l’organisation.
+
+3. **Blocage des utilisateurs non conformes aux règles de conduite** :  
+   Un modérateur peut bloquer temporairement un utilisateur en cas de non-respect des guidelines, lui permettant ainsi de revenir après un rappel des bonnes pratiques.
 
 ---
 
@@ -317,6 +405,17 @@ Configurer les paramètres de vos dépôts pour assurer une gestion cohérente d
 - **Utilisation de Modèles** : Créez des modèles pour les dépôts avec des configurations et fichiers standards pour gagner du temps.
 - **Topics Précis** : Utilisez des tags descriptifs pour catégoriser les dépôts et faciliter leur recherche.
 
+### 💼 Exemples d’Utilisation des Paramètres de Dépôt
+
+1. **Utilisation de modèles de dépôts pour standardiser les nouveaux projets** :  
+   Lors de la création de nouveaux dépôts, une équipe utilise un modèle avec une structure et des fichiers prédéfinis (README, LICENSE, CONTRIBUTING). Cela permet à chaque dépôt de démarrer avec des standards de documentation et de structure déjà en place.
+
+2. **Configuration de dépôts publics pour des projets open-source** :  
+   Un projet de documentation open-source est configuré en tant que dépôt public, permettant à tout le monde de voir et de contribuer sans compromettre les dépôts privés de l’organisation.
+
+3. **Archivage automatique des dépôts inactifs** :  
+   Un dépôt utilisé pour un événement ponctuel est archivé après six mois d’inactivité pour préserver son état sans que personne ne puisse y apporter de modifications non nécessaires.
+
 ---
 
 ## 🔹 2. Ensembles de Règles (Rulesets)
@@ -345,6 +444,17 @@ Protéger le code source en configurant des règles pour le contrôle des branch
 - **Protéger les Branches Principales** : Assurez-vous que les branches \`main\` et \`develop\` sont protégées pour éviter des erreurs critiques.
 - **Exiger des Signatures de Commit** : Utilisez la signature de commits pour garantir l’authenticité des contributions.
 - **Configurer des Tests CI/CD** : Assurez-vous que les tests sont validés avant chaque fusion pour maintenir une base de code stable.
+
+### 💼 Exemples d’Utilisation des Ensembles de Règles
+
+1. **Protection des branches principales pour éviter les erreurs critiques** :  
+   Les branches  \`main\` et \`develop\` sont protégées pour empêcher les pushs directs, garantissant que toutes les modifications passent par des pull requests et une relecture préalable.
+
+2. **Exiger des commits signés pour une meilleure sécurité** :  
+   Un dépôt contenant des informations sensibles exige que tous les commits soient signés. Cela permet de vérifier l’identité de chaque contributeur et d'éviter les contributions non autorisées.
+
+3. **Application de contrôles de statut CI/CD avant la fusion** :  
+   Sur les branches de production, tous les tests CI/CD doivent réussir avant de permettre la fusion d’une pull request. Cela garantit que seules des versions testées et stables passent en production.
 
 ---
 
@@ -375,6 +485,17 @@ Fournir aux développeurs un environnement de développement cloud prêt à l’
 - **Utilisation de Présélections Standardisées** : Créez des environnements prédéfinis pour assurer une cohérence entre les développeurs.
 - **Limiter les Ressources Inutiles** : Optimisez l’utilisation des machines pour éviter les coûts superflus.
 - **Sécuriser les Secrets** : Assurez-vous que les secrets sont stockés et accessibles uniquement aux utilisateurs autorisés.
+
+### 💼 Exemples d’Utilisation des Codespaces
+
+1. **Utilisation de Codespaces pour les nouveaux membres** :  
+   Les nouveaux développeurs rejoignant un projet peuvent accéder à un environnement préconfiguré dès le premier jour, évitant la configuration de leur machine locale et accélérant leur intégration.
+
+2. **Préconfigurations spécifiques pour des projets complexes** :  
+   Une équipe de machine learning configure un Codespace avec toutes les bibliothèques et dépendances nécessaires (TensorFlow, PyTorch) pour éviter les incompatibilités de version.
+
+3. **Gestion des ressources pour limiter les coûts** :  
+   Pour les petits projets, l’équipe limite les ressources CPU et RAM des Codespaces. Cela permet de réduire les coûts d’utilisation des machines cloud tout en offrant un environnement performant pour le développement.
 
 ---
 
@@ -408,6 +529,17 @@ Automatiser les workflows CI/CD pour tester, déployer et gérer les application
 - **Automatiser les Tests et Déploiements** : Utilisez des workflows CI/CD pour valider automatiquement le code et déployer sans intervention manuelle.
 - **Utilisation Optimisée des Runners** : Choisissez les runners adaptés pour chaque projet et configurez un scaling automatique.
 - **Caches Économiques** : Configurez le cache pour réutiliser les dépendances et réduire les temps d’exécution des workflows.
+
+### 💼 Exemples d’Utilisation des Actions GitHub
+
+1. **Automatisation des tests unitaires pour chaque pull request** :  
+   À chaque nouvelle pull request, un workflow CI est déclenché pour exécuter les tests unitaires, assurant que le code proposé respecte les critères de qualité avant d’être fusionné.
+
+2. **Déploiement continu sur un serveur de staging** :  
+   Un workflow déploie automatiquement les modifications sur un environnement de staging, permettant aux équipes de voir les effets en temps réel avant de les publier en production.
+
+3. **Utilisation des runners self-hosted pour des processus spécifiques** :  
+   Une équipe de data engineering utilise des runners auto-hébergés pour des workflows nécessitant de gros volumes de données. Cela permet d’adapter les capacités des runners à des processus exigeants en ressources, tout en réduisant les coûts de cloud.
 
 ---
 
@@ -457,6 +589,17 @@ Renforcer la sécurité des membres de l'organisation avec des méthodes d'authe
 - **Exiger le 2FA pour Tous les Membres** : Cela réduit les risques de compromission des comptes.
 - **Vérifier Régulièrement les Adresses IP** : Assurez-vous que seules les adresses IP de confiance sont autorisées pour limiter les risques d’intrusion.
 
+### 💼 Exemples d’Utilisation de l’Authentification Sécurisée
+
+1. **Activation du 2FA pour tous les utilisateurs** :  
+   Une entreprise de logiciels exige que tous les collaborateurs activent l’authentification à deux facteurs (2FA) pour limiter les risques de compromission des comptes, surtout pour les dépôts critiques.
+
+2. **Configuration du SSO pour simplifier l’accès** :  
+   Une grande organisation active le Single Sign-On (SSO) avec Google Workspace, permettant aux employés de se connecter via leurs comptes d'entreprise sans créer de nouveaux identifiants.
+
+3. **Liste d’adresses IP autorisées pour un contrôle d’accès strict** :  
+   Une équipe de sécurité restreint l’accès aux seuls utilisateurs connectés depuis des adresses IP approuvées (comme celles du bureau), renforçant la sécurité pour les projets sensibles.
+
 ---
 
 ## 🔹 2. Gestion des Clés de Déploiement et Sécurité du Code (Deploy Keys & Code Security)
@@ -487,6 +630,17 @@ Protéger le code source en gérant les clés de déploiement et en configurant 
 - **Scanner Régulièrement le Code** : Programmez des scans réguliers pour anticiper et corriger les failles avant qu'elles ne deviennent critiques.
 - **Utiliser des Clés de Déploiement Sécurisées** : Assurez-vous que chaque clé de déploiement est unique et limitée à un dépôt spécifique.
 
+### 💼 Exemples d’Utilisation des Clés de Déploiement et Sécurité du Code
+
+1. **Clé de déploiement pour un accès restreint aux dépôts en production** :  
+   Une équipe de déploiement utilise des clés SSH dédiées pour accéder aux dépôts de production, permettant des déploiements automatisés sans exposer les identifiants GitHub.
+
+2. **Activation de Dependabot pour suivre les vulnérabilités** :  
+   Dependabot est activé pour surveiller les dépendances et signaler toute mise à jour de sécurité importante, assurant que les bibliothèques utilisées restent sécurisées.
+
+3. **Scanning de secrets pour éviter les fuites d’informations** :  
+   Le **Secret Scanning** est configuré pour détecter les clés API et autres secrets sensibles accidentellement ajoutés au code source, alertant l’équipe avant qu’ils ne deviennent publics.
+
 ---
 
 ## 🔹 3. Conformité et Domaines Vérifiés (Compliance & Verified Domains)
@@ -514,6 +668,17 @@ Assurer la conformité aux standards de sécurité et vérifier les domaines de 
 ### 💡 Bonnes Pratiques
 - **Réviser les Rapports de Conformité** : Consultez régulièrement les rapports de conformité pour repérer les vulnérabilités potentielles.
 - **Vérifier tous les Domaines d’Entreprise** : Assurez-vous que seuls les emails liés aux domaines vérifiés peuvent accéder à l’organisation.
+
+### 💼 Exemples d’Utilisation de la Conformité et des Domaines Vérifiés
+
+1. **Vérification des domaines d’email pour limiter l’accès aux seuls collaborateurs** :  
+   En vérifiant le domaine de messagerie, une organisation s’assure que seuls les employés avec des adresses professionnelles peuvent accéder aux dépôts internes.
+
+2. **Exigences d’audit pour les activités de l’organisation** :  
+   Une société cotée en bourse utilise les logs d’audit pour documenter les modifications importantes et se conformer aux réglementations de sécurité et de transparence.
+
+3. **Rapport de conformité pour des audits externes** :  
+   Une entreprise en partenariat avec des organismes de régulation utilise les rapports de conformité GitHub pour vérifier que tous les dépôts et membres respectent les politiques internes et externes.
 
 ---
 
@@ -543,6 +708,17 @@ Protéger les informations sensibles de l’organisation (clés API, tokens, cre
 ### 💡 Bonnes Pratiques
 - **Nommez les Secrets de Manière Descriptive** : Cela facilite la gestion sans dévoiler d’informations sensibles.
 - **Contrôlez l’Accès aux Secrets** : Assurez-vous que seuls les membres ayant besoin d'accéder aux secrets peuvent y accéder.
+
+### 💼 Exemples d’Utilisation des Secrets et Variables
+
+1. **Utilisation de secrets pour protéger les clés API dans les workflows** :  
+   Une clé API sensible est ajoutée en tant que secret pour un workflow CI/CD. Elle est utilisée pour authentifier une application sans être exposée dans le code.
+
+2. **Variables d’environnement spécifiques aux environnements de staging et de production** :  
+   Une équipe de développement configure des variables pour chaque environnement (staging, production) afin d’adapter le comportement de l’application en fonction de l’environnement sans modifier le code.
+
+3. **Restrictions d’accès aux secrets pour les équipes de développement spécifiques** :  
+   Les secrets nécessaires au déploiement sont accessibles uniquement aux membres de l’équipe devOps, garantissant que les autres équipes n’ont pas accès aux informations sensibles sans autorisation.
 
 ---
 
@@ -597,6 +773,17 @@ Installer et gérer des applications GitHub pour étendre les fonctionnalités d
 - **Limiter les Webhooks** : Envoyez uniquement les événements nécessaires aux applications pour éviter des volumes de données inutiles.
 - **Contrôler les Tokens OAuth** : Supprimez les tokens obsolètes pour limiter les risques d’accès non autorisé.
 
+### 💼 Exemples d’Utilisation de GitHub Apps & OAuth
+
+1. **Intégration avec Slack pour les notifications de commit** :  
+   Une entreprise configure une GitHub App pour envoyer des notifications de commit sur un canal Slack. Chaque commit ou pull request déclenche une notification, permettant à toute l’équipe de suivre l’évolution des projets en temps réel.
+
+2. **Configuration des webhooks pour déclencher des scripts automatisés** :  
+   Un webhook est configuré pour envoyer une requête HTTP à chaque nouveau push. Ce webhook déclenche un script qui met à jour un tableau Kanban, en ajoutant automatiquement les nouvelles tâches correspondant aux commits.
+
+3. **Utilisation d'OAuth pour sécuriser les applications internes** :  
+   Une application interne utilise OAuth pour que les employés se connectent via leurs comptes GitHub d’entreprise, assurant ainsi une authentification unique (SSO) sans nécessiter de nouveaux identifiants.
+
 ---
 
 ## 🔹 2. Personal Access Tokens
@@ -626,6 +813,17 @@ Créer et gérer des tokens d’accès personnel pour permettre des connexions s
 - **Limiter la Durée des Tokens** : Utilisez des tokens courts pour minimiser les risques de compromission.
 - **Auditer les Tokens** : Révisez régulièrement les tokens et supprimez ceux qui ne sont plus utilisés.
 - **Utiliser des Permissions Granulaires** : Privilégiez les tokens à permissions limitées pour sécuriser davantage l’accès.
+
+### 💼 Exemples d’Utilisation des Personal Access Tokens
+
+1. **Utilisation d’un token pour automatiser les mises à jour des dépôts** :  
+   Un PAT est créé pour automatiser la mise à jour des dépôts en utilisant des scripts externes. Cela permet d’ajouter des fichiers, de créer des branches, ou de gérer des pull requests sans avoir à se connecter manuellement.
+
+2. **Accès limité pour des outils d’analyse de code** :  
+   Un outil d’analyse de code est configuré pour se connecter avec un PAT disposant d’un accès en lecture seule. Cela garantit que l’outil peut analyser le code sans pouvoir effectuer de modifications.
+
+3. **Expiration planifiée des tokens pour sécuriser les accès temporaires** :  
+   Pour une collaboration avec des consultants, des tokens d’accès avec expiration sont créés pour permettre un accès temporaire et limité aux dépôts. Une fois le projet terminé, les tokens expirent automatiquement, supprimant l’accès.
 
 ---
 
@@ -659,6 +857,17 @@ Permettre aux développeurs de votre organisation de créer des applications et 
 - **Limiter l'Accès API** : N’activez l’accès API que pour les applications essentielles.
 - **Vérifier les Éditeurs** : Assurez-vous de la fiabilité des éditeurs pour éviter les risques d’accès non autorisés.
 
+### 💼 Exemples d’Utilisation des Paramètres pour Développeurs
+
+1. **Création d’un webhook pour les notifications de pull request** :  
+   Un webhook est configuré pour notifier automatiquement une application de gestion de projet dès qu’une nouvelle pull request est ouverte. L’équipe de projet est ainsi instantanément informée des mises à jour.
+
+2. **Configuration d’une application OAuth pour un portail interne** :  
+   Un portail interne permet aux employés de se connecter via leurs comptes GitHub en utilisant une application OAuth, centralisant l’authentification et limitant le besoin de multiples identifiants.
+
+3. **Développement d’une application GitHub pour automatiser les révisions de code** :  
+   Une équipe de développement crée une application GitHub qui analyse les pull requests pour détecter des erreurs de style et de syntaxe. Cette application commente automatiquement les lignes à corriger, facilitant la révision du code.
+
 ---
 
 ## 🚀 Conclusion : Optimiser les Intégrations et le Développement
@@ -674,7 +883,7 @@ Ces réglages vous permettent de tirer parti des intégrations GitHub et d'offri
 
 ---
 
-# 🗂️ Archive et Logs – Tutoriel Complet
+# 🗂️ Archive et Logs
 
 La section **Archive et Logs** vous permet de gérer l'historique d'activité, d'accéder aux logs d'audit, de récupérer les dépôts supprimés et de configurer des politiques de rétention pour les données importantes. Elle est essentielle pour maintenir une traçabilité complète des actions au sein de votre organisation et pour garantir la sécurité et la conformité.
 
@@ -712,6 +921,17 @@ Suivre en détail l’activité de l’organisation, consulter l’historique de
 - **Configurer une Politique de Rétention Appropriée** : Choisissez une durée de rétention en fonction des besoins de conformité ou des standards de l’organisation.
 - **Exporter et Archiver les Logs** : Sauvegardez périodiquement les logs pour garder un historique complet.
 
+### 💼 Exemples d’Utilisation des Logs & Audits
+
+1. **Surveillance des modifications importantes pour la conformité** :  
+   Une équipe d’audit vérifie régulièrement les logs d’audit pour surveiller les changements de permissions et les accès non autorisés. Cela permet de s’assurer que seuls les utilisateurs autorisés peuvent modifier les paramètres sensibles.
+
+2. **Suivi des sponsors pour un financement open-source** :  
+   Une organisation open-source utilise les logs pour suivre ses sponsors. Ces informations permettent de remercier les sponsors, d’évaluer les contributions financières et d’analyser l’engagement de la communauté.
+
+3. **Politique de rétention pour les exigences légales** :  
+   Une entreprise réglementée configure une politique de rétention de 90 jours pour ses logs d’audit, répondant aux exigences de conformité tout en optimisant la gestion des données.
+
 ---
 
 ## 🔹 2. Dépôts Supprimés (Deleted Repositories)
@@ -739,6 +959,17 @@ Gérer les dépôts supprimés, configurer une période de récupération et dé
 - **Restaurer Rapidement les Dépôts Supprimés** : Agissez dès qu’un dépôt est supprimé pour éviter la perte définitive de données.
 - **Configurer une Fenêtre de Restauration Suffisante** : Fixez une période assez longue pour éviter la suppression irréversible des dépôts accidentellement supprimés.
 - **Effectuer des Sauvegardes Régulières** : Utilisez un service de sauvegarde externe pour protéger les dépôts critiques contre les suppressions accidentelles.
+
+### 💼 Exemples d’Utilisation des Dépôts Supprimés
+
+1. **Fenêtre de restauration pour éviter les pertes de données accidentelles** :  
+   Un dépôt projet est accidentellement supprimé. Grâce à la fenêtre de restauration de 30 jours, le dépôt est restauré immédiatement après l'incident sans perte de données.
+
+2. **Suppression permanente des dépôts obsolètes pour optimiser l’espace** :  
+   Des dépôts archivés depuis plusieurs années sont supprimés après la période de récupération. Cela permet de libérer de l’espace tout en conservant uniquement les projets actifs.
+
+3. **Récupération de données après un incident de sécurité** :  
+   À la suite d'un incident de sécurité, un dépôt a été supprimé pour protéger les données. Une fois la sécurité rétablie, l’équipe utilise la fonctionnalité de récupération pour restaurer le dépôt en toute sécurité.
 
 ---
 
