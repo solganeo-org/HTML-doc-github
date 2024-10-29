@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documentation Markdown</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="scrollToTop" class="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+    <div id="nav">
+        <h1>Navigation</h1>
+        <ul>
+            <li>
+                <a href="#⚙️-accès-et-généralités">⚙️ Accès et Généralités</a>
+                <ul>
+                    <li><a href="#🔹-1-billing-and-plans">Billing and Plans</a></li>
+                    <li><a href="#🔹-2-organization-roles--member-privileges">Organization Roles</a></li>
+                    <li><a href="#🔹-3-repository-roles">Repository Roles</a></li>
+                    <li><a href="#🔹-4-importexport">Import/Export</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#🛠️-modération">🛠️ Modération</a>
+                <ul>
+                    <li><a href="#🔹-1-utilisateurs-bloqués-blocked-users">Blocked Users</a></li>
+                    <li><a href="#🔹-2-limites-dinteraction-interaction-limits">Interaction Limits</a></li>
+                    <li><a href="#🔹-3-limites-de-revue-de-code-code-review-limits">Code Review Limits</a></li>
+                    <li><a href="#🔹-4-modérateurs-moderators">Moderators</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#📝-code-planification-et-automatisation">📋 Code, Planification & Automatisation</a>
+                <ul>
+                    <li><a href="#🔹-1-paramètres-du-dépôt-repository-settings">Repository Settings</a></li>
+                    <li><a href="#🔹-2-ensembles-de-règles-rulesets">Rulesets</a></li>
+                    <li><a href="#🔹-3-codespaces">Codespaces</a></li>
+                    <li><a href="#🔹-4-actions">Actions</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#🔒-sécurité-et-conformité">🔒 Sécurité & Conformité</a>
+                <ul>
+                    <li><a href="#🔹-1-authentification-sécurisée-authentication-security">Authentication Security</a></li>
+                    <li><a href="#🔹-2-gestion-des-clés-de-déploiement-et-sécurité-du-code-deploy-keys--code-security">Deploy Keys & Code Security</a></li>
+                    <li><a href="#🔹-3-conformité-et-domaines-vérifiés-compliance--verified-domains">Compliance & Verified Domains</a></li>
+                    <li><a href="#🔹-4-secrets-et-variables-secrets-and-variables">Secrets & Variables</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#🔌-intégrations-et-développeurs">🔌 Intégrations & Développeurs</a>
+                <ul>
+                    <li><a href="#🔹-1-github-apps--oauth">GitHub Apps & OAuth</a></li>
+                    <li><a href="#🔹-2-personal-access-tokens">Personal Access Tokens</a></li>
+                    <li><a href="#🔹-3-paramètres-pour-développeurs-developer-settings">Developer Settings</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#🗂️-archive-et-logs-–-tutoriel-complets">🗂️ Archive & Logs</a>
+                <ul>
+                    <li><a href="#🔹-1-logs--audit">Logs & Audit</a></li>
+                    <li id="last"><a href="#🔹-2-dépôts-supprimés-deleted-repositories">Deleted Repositories</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Rechercher dans la documentation..." />
+        <button id="clearSearch">Effacer</button>
+        <div id="resultsCount"></div>
+    </div>
+
+    <div id="searchResults"></div>
+
+    <div id="main-content">
+        <div id="content" class="markdown-body"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
